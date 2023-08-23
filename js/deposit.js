@@ -5,6 +5,13 @@ function getInputFieldValueById(inputFieldId) {
     inputField.value = '';
     return inputFieldValue;
 }
+function getElementValueById(elementId) {
+    const element = document.getElementById(elementId);
+    const elementValueString = element.value;
+    const value = parseFloat(elementValueString);
+    element.value = '';
+    return value;
+}
 
 
 document.getAnimations('btn-deposit').addEventListener('click', function () {
